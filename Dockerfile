@@ -16,7 +16,7 @@ RUN yum install -y wget gzip xz tar
 
 RUN mkdir -p ~/.config/clash && \
 	cd ~/.config/clash && \
-	wget https://sub1.fawncloud.one/link/5iAR3PZYPjXSY3Ur?clash=1 -O config.yaml
+	wget <你的Clash机场链接> -O config.yaml
 
 WORKDIR /data
 
@@ -34,5 +34,3 @@ EXPOSE 9090
   
 # 定义容器启动时执行的命令
 CMD ["/bin/bash", "-c", "/data/clash"]
-# CMD ["bash", "-c", "while true; do echo 'Container is running'; sleep 1; done"]
-
